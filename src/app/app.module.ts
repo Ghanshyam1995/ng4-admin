@@ -7,8 +7,11 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {SlimLoadingBarModule} from 'ng2-slim-loading-bar';
 import {  Routes } from "@angular/router";
 import {MaterialModule} from "@angular/material";
-import {HomeComponent,ForgotPasswordComponent,RegisterComponent,LoginComponent} from "./pages/Index";
+
 import {routing} from "./app.routes";
+import { LoginComponent } from "app/pages/Login/Login.component";
+import { RegisterComponent } from "app/pages/Register/Register.component";
+import { HomeComponent } from "app/pages/Home/home.component";
 
 
 @NgModule({
@@ -16,7 +19,7 @@ import {routing} from "./app.routes";
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    ForgotPasswordComponent,
+    
     HomeComponent
   ],
   imports: [
@@ -24,7 +27,7 @@ import {routing} from "./app.routes";
     FormsModule,MaterialModule,BrowserAnimationsModule,
     HttpModule,ReactiveFormsModule
   ],
-  entryComponents:[ForgotPasswordComponent],
+  
   providers: [],
   bootstrap: [AppComponent]
 })

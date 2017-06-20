@@ -1,3 +1,9 @@
-<p>
-  home works!
-</p>
+<md-sidenav-container fullscreen>
+    <md-sidenav mode="side" #sidenav align="start" opened color="warn">
+
+    </md-sidenav>
+    <!-- Body -->
+    <md-toolbar color="primary">
+        <span><button md-icon-button (click)="sidenav.toggle()"><md-icon>toc</md-icon></button></span>
+    </md-toolbar>
+</md-sidenav-container>

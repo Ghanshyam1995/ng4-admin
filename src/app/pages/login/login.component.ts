@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {trigger,state,animate,style,transition,keyframes} from "@angular/animations";
-import {MdDialog} from "@angular/material";
-import { ForgotPasswordComponent } from "app/pages/partials/forgot-password/forgot-password.component";
 import {FormGroup, AbstractControl, FormBuilder, Validators} from '@angular/forms';
 import { routerTransition } from "app/shared/animations/routing.animation";
 
@@ -14,12 +12,13 @@ import { routerTransition } from "app/shared/animations/routing.animation";
    
 })
 export class LoginComponent implements OnInit {
+    router: any;
  public form:FormGroup;
  public email:AbstractControl;
   public password:AbstractControl;
-  constructor(public dialog:MdDialog,fb:FormBuilder) {
+  constructor(fb:FormBuilder) {
     this.form=fb.group({
-      'email': ['', Validators.compose([Validators.required,Validators.pattern('/\S+@\S+\.\S+/')])],
+      'email': ['', Validators.compose([Validators.required])],
       'password': ['', Validators.compose([Validators.required, Validators.minLength(8)])]
     
     });
@@ -30,13 +29,14 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     
   }
-  OpenDialog()
-  {
-    this.dialog.open(ForgotPasswordComponent);
-  }
+
 
   onSubmit(form){
     console.log(form);
+  }
+  Login()
+  {
+    
   }
 
   
