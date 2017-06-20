@@ -4,7 +4,7 @@ export function routerTransition() {
   return slideToLeft();
 }
 
-function slideToRight() {
+export function slideToRight() {
   return trigger('routerTransition', [
     state('void', style({position:'fixed', width:'100%'}) ),
     state('*', style({position:'fixed', width:'100%'}) ),
@@ -19,7 +19,7 @@ function slideToRight() {
   ]);
 }
 
-function slideToLeft() {
+ export function slideToLeft() {
   return trigger('routerTransition', [
     state('void', style({position:'fixed', width:'100%'}) ),
     state('*', style({position:'fixed', width:'100%'}) ),
@@ -35,7 +35,7 @@ function slideToLeft() {
 }
 
 
-function slideToBottom() {
+export function slideToBottom() {
   return trigger('routerTransition', [
     state('void', style({position:'fixed', width:'100%', height:'100%'}) ),
     state('*', style({position:'fixed', width:'100%', height:'100%'}) ),
@@ -50,7 +50,7 @@ function slideToBottom() {
   ]);
 }
 
-function slideToTop() {
+export function slideToTop() {
   return trigger('routerTransition', [
     state('void', style({position:'fixed', width:'100%', height:'100%'}) ),
     state('*', style({position:'fixed', width:'100%', height:'100%'}) ),
